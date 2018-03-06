@@ -44,11 +44,11 @@ for i = 2:frames
     real_v_vec(i,1) = ROI_v_vec(i,1)*scale - Stage_v_vec(i,1);
     real_v_vec(i,2) = ROI_v_vec(i,2)*scale - Stage_v_vec(i,2);
     
-    P2A_vec(i-1,1) = ant_neuron(i-1,1) - post_neuron(i-1,1);
+    P2A_vec(i-1,1) = ant_neuron(i-1,1) - post_neuron(i-1,1);  %posterior to anterior direction 
     P2A_vec(i-1,2) = ant_neuron(i-1,2) - post_neuron(i-1,2);
     
     direction = 1;
-    if ((P2A_vec(i-1,1)*real_v_vec(i,1) + P2A_vec(i-1,2)*real_v_vec(i,2)) <0)
+    if ((P2A_vec(i-1,1)*real_v_vec(i,1) + P2A_vec(i-1,2)*real_v_vec(i,2)) <0) %angle > pi/2. viewed as backward movement.
         direction = -1;
     end
     real_velocity(i) = sqrt(real_v_vec(i,1)^2 + real_v_vec(i,2)^2) * direction;
