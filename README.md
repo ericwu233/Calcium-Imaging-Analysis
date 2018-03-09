@@ -8,7 +8,7 @@ Analyze calcium imaging videos and extract intensity and velocity information
 4.	Enter command “setup_proof_reading_0”. Select the target .tif file.
 5.	Enter the period for processing (either the whole video or the period of interest according to the reversal annotation), after Matlab finishes loading the video. The strat frame needs to be no smaller than 1.
 6.	A merged GFP/RFP picture will be shown for checking the channel alignment. If the alignment is not ideal, enter command “Alignment”. RFP channel will be shifted based on the mean shift value of the first 30 frames. The adjusted GFP/RFP mergence will then be shown. 
-# The alignment command may go wrong if the original panels have been well aligned. 
+*The alignment command may go wrong if the original panels have been well aligned.* 
 7.	Enter “Stage_velocity”. Select the folder of the image stack. The stage position will be read into [xpos, ypos]. 
 8.	Enter command “proof_reading(imagelist,[],filename,istart,iend,1,1)”
 -Select a ROI and click on “track neuron”, the program will track the bright region throughout the selected period.
@@ -17,7 +17,7 @@ Analyze calcium imaging videos and extract intensity and velocity information
 -Click on “export data” to export the ratio and signal data.
 -If doing multi-neuron imaging, drag the progress bar to the beginning, select anther neuron of interest, track it and proof-read the tracking through.
 #######################################################################
-# To extract the velocity data, at least two neurons need to be annotated
+*To extract the velocity data, at least two neurons need to be annotated*
 #######################################################################
 9.	After annotating one neuron and exporting the data, click on “Ant neuron” to save the position as anterior reference. Click on “Post neuron” after annotating and exporting a posterior one to save it as posterior reference. Click on “Calculate velocity” to calculate and export the velocity as “Real_velocity”. A smoothened curve will be displayed. 
 10.	Revise the velocity plot according to the eyeballed reversal annotation. Removing outlines and smoothening may be required.
